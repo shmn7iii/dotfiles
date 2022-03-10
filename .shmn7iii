@@ -1,38 +1,89 @@
-echo "\n========================================"
-echo " 🏝 .zshrcを作ってプロンプト設定を書き込むよ"
-echo "========================================\n"
-cat << EOF > ~/.zshrc
-# プロンプト設定
-autoload -Uz colors colors
-PROMPT='%F{yellow}%B%n@%m%b%f:%F{cyan}[%d]%f
-[%*] %# '
+#!/bin/bash -eu
 
-# コマンドの実行ごとに改行
-function precmd() {
-    if [ -z "$NEW_LINE_BEFORE_PROMPT" ]; then
-        NEW_LINE_BEFORE_PROMPT=1
-    elif [ "$NEW_LINE_BEFORE_PROMPT" -eq 1 ]; then
-        echo ""
-    fi
-}
-
-EOF
+cd ~
 
 
 echo "\n========================================"
 echo " 🏝 Homebrew をインストールするよ"
 echo "========================================\n"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+if [ ! -f /usr/local/bin/brew ]
+ then
+  echo "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+ else
+  echo "Homebrew already installed."
+fi
+
 
 
 echo "\n========================================"
-echo " 🏝 git,vim,jq,tree をインストールするよ"
+echo " 🏝 shmn7iii/dotfiles をクローンするよ"
 echo "========================================\n"
-brew install git vim jq tree
+
+if [ ! -d ~/.shmn7iii/dotfiles ]
+ then
+  cd ~/.ssh
+  ssh-keygen
+  pbcopy < ~/.ssh/id_rsa.pub
+  echo "クリップボードに~/.ssh/id_rsa.pubをコピーしました。"
+  echo "公開鍵をGitHubに登録してください > "
+  select yn in "Yes"; do
+   case $yn in
+    Yes ) break;;
+   esac
+  done
+
+  echo "Cloning dotfiles..."
+	mkdir ~/.shmn7iii
+	cd ~/.shmn7iii
+  git clone git@github.com:shmn7iii/dotfiles.git
+ else
+  echo "dotfiles already cloned."
+fi
+
 
 
 echo "\n========================================"
-echo " 🏝 mac特有の設定をするよ"
+echo " 🏝 Brewfile の内容をインストールするよ"
+echo "========================================\n"
+
+echo "Installing some software & library..."
+brew bundle -v --file=./.shmn7iii/dotfiles/Brewfile
+
+
+
+echo "\n========================================"
+echo " 🏝 .zshrc 関係の設定をするよ"
+echo "========================================\n"
+mkdir ~/.zsh
+echo "Installing git-prompt.sh"
+curl -o ~/.zsh/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+echo "Installing git-completion.bash"
+curl -o ~/.zsh/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+echo "Installing git-completion.zsh (rename to _git)"
+curl -o ~/.zsh/_git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
+echo "Copy .zshrc ..."
+cp ~/.shmn7iii/dotfiles/.zshrc ~/.zshrc
+
+
+
+echo "\n========================================"
+echo " 🏝 .vimrc を連れてくるよ"
+echo "========================================\n"
+ln -fs ~/.shmn7iii/dotfiles/.vimrc ~/.vimrc
+
+
+
+echo "\n========================================"
+echo " 🏝 .config/* を連れてくるよ"
+echo "========================================\n"
+ln -fs ~/.shmn7iii/dotfiles/.config ~/.config
+
+
+
+echo "\n========================================"
+echo " 🏝 mac 特有の設定をするよ"
 echo "========================================\n"
 defaults write com.apple.finder QuitMenuItem -bool true
 defaults write com.apple.dock springboard-columns -int 8
@@ -40,13 +91,3 @@ defaults write com.apple.dock springboard-rows -int 6
 defaults write com.apple.dock ResetLaunchPad -bool TRUE
 defaults write com.apple.Dock autohide-delay -float 0
 killall Dock
-
-
-echo "\n========================================"
-echo " 🏝 Globalなgitのignoreを設定するよ"
-echo "========================================\n"
-mkdir -p ~/.config/git
-cat <<EOF > ~/.config/git/ignore
-.DS_Store
-.idea/
-EOF
