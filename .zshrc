@@ -28,9 +28,8 @@ autoload -Uz compinit && compinit
 
 # プロンプト
 setopt PROMPT_SUBST
-PROMPT='%F{yellow}%B%n@%m%b%f:%F{cyan}[%~]%f
+PROMPT='%F{yellow}%B%n@%m%b%f:%F{cyan}[%~]%f%F{green}$(__git_ps1)%f
 [%*] %# '
-RPROMPT='%F{red}$(__git_ps1)%f'
 
 # コマンドの実行ごとに改行
 function precmd() {
