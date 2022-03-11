@@ -43,7 +43,17 @@ fi
 
 
 echo "\n========================================"
-echo " 🏝 .zshrc 関係の設定をするよ"
+echo " 🏝 Brewfile の内容をインストールするよ"
+echo "========================================\n"
+echo "Installing some software & library..."
+brew update
+brew upgrade
+brew bundle -v --file=~/.shmn7iii/dotfiles/Brewfile
+
+
+
+echo "\n========================================"
+echo " 🏝 git-prompt,completion の設定をするよ"
 echo "========================================\n"
 mkdir ~/.zsh
 echo "Installing git-prompt.sh"
@@ -52,18 +62,14 @@ echo "Installing git-completion.bash"
 curl -o ~/.zsh/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 echo "Installing git-completion.zsh (rename to _git)"
 curl -o ~/.zsh/_git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
-echo "Copy .zshrc ..."
-cp ~/.shmn7iii/dotfiles/.zshrc ~/.zshrc
-ln -fs ~/.shmn7iii/dotfiles/.prompt ~/.prompt
-source ~/.zshrc
 
 
 
 echo "\n========================================"
-echo " 🏝 Brewfile の内容をインストールするよ"
+echo " 🏝 .zshrc を連れてくるよ"
 echo "========================================\n"
-echo "Installing some software & library..."
-brew bundle -v --file=~/.shmn7iii/dotfiles/Brewfile
+cp ~/.shmn7iii/dotfiles/.zshrc ~/.zshrc
+source ~/.zshrc
 
 
 
@@ -83,6 +89,15 @@ ln -fs ~/.shmn7iii/dotfiles/.config/git/ignore ~/.config/git/ignore
 
 
 echo "\n========================================"
+echo " 🏝 anyenv の設定をするよ"
+echo "========================================\n"
+ln -fs ~/.shmn7iii/dotfiles/.config/anyenv ~/.config/anyenv
+anyenv init
+anyenv install --init
+
+
+
+echo "\n========================================"
 echo " 🏝 mac 特有の設定をするよ"
 echo "========================================\n"
 defaults write com.apple.finder QuitMenuItem -bool true
@@ -91,3 +106,16 @@ defaults write com.apple.dock springboard-rows -int 6
 defaults write com.apple.dock ResetLaunchPad -bool TRUE
 defaults write com.apple.Dock autohide-delay -float 0
 killall Dock
+
+
+
+echo "\n========================================"
+echo " 🏝 source ~/.zshrc"
+echo "========================================\n"
+source ~/.zshrc
+
+
+
+echo "\n========================================"
+echo " 🏝 終了！！！"
+echo "========================================"
