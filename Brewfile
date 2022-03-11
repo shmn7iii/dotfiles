@@ -19,6 +19,3 @@ cask "discord"
 cask "Notion"
 cask "bitwarden"
 cask "appcleaner"
-
-tap "homebrew/cask-fonts"
-cask "font-mononoki-nerd-font"
