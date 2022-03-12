@@ -90,5 +90,5 @@ $ anyenv install exenv
 ## マウス速度を設定する場合
 
 ```bash
-defaults write "Apple Global Domain" com.apple.mouse.scaling 15
+defaults write "Apple Global Domain" com.apple.mouse.scaling 10
 ```
