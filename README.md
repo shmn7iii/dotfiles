@@ -46,14 +46,6 @@ $ gem install rails
 $ anyenv install goenv
 ```
 
-```bash
-# GOPATHの変更
-$ echo '# GOPATH' >> ~/.zshrc
-$ echo 'export GOPATH=$HOME/.go' >> ~/.zshrc
-# 確認
-$ go env GOPATH
-```
-
 ## Python
 
 ```bash
@@ -64,6 +56,11 @@ $ anyenv install pyenv
 ```bash
 $ anyenv install jenv
 ```
+
+jenvでは別途言語環境を用意しなきゃいけない  
+以下記事参照  
+
+https://startappdevfrom35.com/multiversionjavadevenv/
 
 ## Node.js
 
