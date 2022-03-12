@@ -98,18 +98,21 @@ anyenv install --init
 
 
 echo "\n========================================"
-echo " 🏝 mac 特有の設定をするよ"
+echo " 🏝 macOS の設定をするよ"
 echo "========================================\n"
 defaults write com.apple.dock springboard-columns -int 8
 defaults write com.apple.dock springboard-rows -int 6
-defaults write com.apple.dock ResetLaunchPad -bool TRUE
 defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock mru-spaces -bool false
+defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock ResetLaunchPad -bool true
 defaults write com.apple.finder QuitMenuItem -bool true
-defaults write com.apple.finder AppleShowAllFiles YES
+defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write -g AppleScrollerPagingBehavior -bool true
 defaults write -g NSCloseAlwaysConfirmsChanges -bool false
+
 killall Dock
 
 
