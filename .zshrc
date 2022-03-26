@@ -49,3 +49,6 @@ function precmd() {
 # ================================
 # anyenv
 eval "$(anyenv init -)"
+
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
