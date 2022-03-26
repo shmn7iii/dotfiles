@@ -52,3 +52,16 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # anyenv
 eval "$(anyenv init -)"
+
+
+# ================================
+# alias
+# ================================
+# reload shell
+alias reload='exec $SHELL -l'
+
+# list all file/directory
+alias la='ls -a'
+
+# change directory to "GitHub"
+alias cg='cd ~/Documents/GitHub/'
