@@ -18,3 +18,6 @@ set expandtab
 set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=2
+
+" バックスペースが効かない
+set backspace=indent,eol,start
