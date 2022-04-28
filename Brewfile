@@ -6,6 +6,7 @@ brew "yarn"
 brew "curl"
 brew "wget"
 brew "anyenv"
+brew "hadolint"
 
 cask "visual-studio-code"
 cask "coteditor"
