@@ -62,3 +62,10 @@ alias reload='exec $SHELL -l'
 
 # change directory to "GitHub"
 alias cg='cd ~/Documents/GitHub/'
+
+# ls after cd
+cdls ()
+{
+    \cd "$@" && ls
+}
+alias cd="cdls"
