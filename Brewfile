@@ -22,3 +22,5 @@ cask "bitwarden"
 cask "appcleaner"
 cask "the-unarchiver"
 cask "jetbrains-toolbox"
+
+cask "brooklyn"
