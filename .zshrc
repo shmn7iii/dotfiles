@@ -66,6 +66,6 @@ alias cg='cd ~/Documents/GitHub/'
 # ls after cd
 cdls ()
 {
-    \cd "$@" && ls
+    \cd "$@" && ls -a
 }
 alias cd="cdls"
