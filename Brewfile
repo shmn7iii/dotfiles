@@ -1,25 +1,31 @@
-brew "git"
-brew "vim"
-brew "jq"
-brew "tree"
-brew "yarn"
-brew "curl"
-brew "wget"
-brew "anyenv"
-brew "hadolint"
+brew 'git'
+brew 'vim'
+brew 'jq'
+brew 'tree'
+brew 'yarn'
+brew 'curl'
+brew 'wget'
+brew 'anyenv'
+brew 'hadolint'
 
-cask "visual-studio-code"
-cask "coteditor"
-cask "github"
-cask "google-chrome"
-cask "firefox"
-cask "docker"
-cask "slack"
-cask "zoom"
-cask "discord"
-cask "notion"
-cask "bitwarden"
-cask "appcleaner"
-cask "the-unarchiver"
-cask "rectangle"
-cask "jetbrains-toolbox"
+cask 'google-chrome'
+cask 'firefox'
+
+cask 'github'
+cask 'warp'
+cask 'visual-studio-code'
+cask 'jetbrains-toolbox'
+cask 'coteditor'
+cask 'docker'
+
+cask 'notion'
+cask 'slack'
+cask 'discord'
+cask 'zoom'
+cask 'bitwarden'
+
+cask 'appcleaner'
+cask 'the-unarchiver'
+cask 'rectangle'
+
+cask 'brooklyn'
