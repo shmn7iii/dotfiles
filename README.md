@@ -46,6 +46,10 @@ $ gem install rails
 $ anyenv install goenv
 ```
 
+いらん説もある
+
+参考：[「Goでは○○envが不要になった理由」](https://tenntenn.dev/ja/posts/2021-06-27-xxenv/)
+
 ## Python
 
 ```bash
@@ -57,10 +61,9 @@ $ anyenv install pyenv
 $ anyenv install jenv
 ```
 
-jenvでは別途言語環境を用意しなきゃいけない  
-以下記事参照  
+jenvでは別途言語環境を用意しなきゃいけない
 
-https://startappdevfrom35.com/multiversionjavadevenv/
+参考：[「jenvによる複数バージョン共存、切り替え可能なJava開発環境の構築」](https://startappdevfrom35.com/multiversionjavadevenv/)
 
 ## Node.js
 
