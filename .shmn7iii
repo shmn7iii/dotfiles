@@ -6,7 +6,7 @@ cd ~
 echo "\n========================================"
 echo " 🏝 Homebrew をインストールするよ"
 echo "========================================\n"
-if [ ! -f /usr/local/bin/brew ]
+if [ ! -f /usr/local/bin/brew ] ||  [ ! -f /opt/homebrew/bin/brew ]
  then
   echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
