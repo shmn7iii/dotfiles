@@ -1,4 +1,3 @@
-
 # ================================
 # common
 # ================================
@@ -8,7 +7,6 @@ export PATH="/usr/local/sbin:$PATH"
 
 autoload -Uz colors && colors
 autoload -Uz compinit && compinit
-
 
 
 # ================================
@@ -25,23 +23,22 @@ autoload -Uz compinit && compinit
 # fpath=(~/.zsh $fpath)
 # zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 # autoload -Uz compinit && compinit
-
-# # プロンプト
-# setopt PROMPT_SUBST
 # PROMPT='%F{yellow}%B%n@%m%b%f:%F{cyan}[%~]%f%F{green}$(__git_ps1)%f
 # [%*] %# '
 
-# # コマンドの実行ごとに改行
-# function precmd() {
-#     # Print a newline before the prompt, unless it's the
-#     # first prompt in the process.
-#     if [ -z "$NEW_LINE_BEFORE_PROMPT" ]; then
-#         NEW_LINE_BEFORE_PROMPT=1
-#     elif [ "$NEW_LINE_BEFORE_PROMPT" -eq 1 ]; then
-#         echo ""
-#     fi
-# }
+# プロンプト
+setopt PROMPT_SUBST
+PROMPT='%F{yellow}%B%n@%m%b%f:%F{cyan}[%~]%f
+[%*] %# '
 
+# コマンドの実行ごとに改行
+function precmd() {
+    if [ -z "$NEW_LINE_BEFORE_PROMPT" ]; then
+        NEW_LINE_BEFORE_PROMPT=1
+    elif [ "$NEW_LINE_BEFORE_PROMPT" -eq 1 ]; then
+        echo ""
+    fi
+}
 
 
 # ================================
