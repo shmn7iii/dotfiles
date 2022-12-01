@@ -31,5 +31,6 @@ cask 'bitwarden'
 cask 'appcleaner'
 cask 'the-unarchiver'
 cask 'rectangle'
+cask 'skitch'
 
 cask 'brooklyn'
