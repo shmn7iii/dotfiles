@@ -31,5 +31,6 @@ cask 'appcleaner'
 cask 'the-unarchiver'
 cask 'rectangle'
 cask 'skitch'
+cask 'browserosaurus'
 
 cask 'brooklyn'
