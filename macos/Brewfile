@@ -6,6 +6,7 @@ brew 'yarn'
 brew 'curl'
 brew 'wget'
 brew 'anyenv'
+brew 'starship'
 
 cask 'google-chrome'
 cask 'firefox'
