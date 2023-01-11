@@ -4,7 +4,6 @@
 
 ```bash
 $ xcode-select --install
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 $ git clone https://github.com/shmn7iii/dotfiles.git ~/.dotfiles && cd .dotfiles
 $ cd macos
 $ /bin/bash setup.sh
