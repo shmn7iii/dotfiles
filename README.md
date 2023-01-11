@@ -25,6 +25,5 @@ $ /bin/bash setup.sh
 
 ### common: fonts
 
-[Cica](https://github.com/miiton/Cica)
-
+[Cica](https://github.com/miiton/Cica)  
 [Source Han Code JP](https://github.com/adobe-fonts/source-han-code-jp)
