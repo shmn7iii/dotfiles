@@ -1,5 +1,6 @@
 format = """
-$directory$git_branch$git_status$git_commit$ruby$golang$java"""
+$directory$git_branch$git_status$git_commit$ruby$golang$nodejs$java$python"""
+
 scan_timeout = 10
 
 [shell]
@@ -10,15 +11,15 @@ style = "bold blue"
 read_only_style = "white"
 fish_style_pwd_dir_length = 3
 format = "[$read_only]($read_only_style)[  ]($style)[$path]($style) "
-truncation_length = 4 
+truncation_length = 4
 truncation_symbol = ".../"
 
 [git_status]
 conflicted = " "
-untracked  = "？"
-stashed    = " "
+untracked  = " "
+stashed    = "📥 "
 modified   = " "
-staged     = " "
+staged     = "⬆️ "
 renamed    = " "
 deleted    = " "
 style = "bold yellow"
@@ -27,4 +28,4 @@ behind = "▼ ${count}"
 diverged = "▲ ${ahead_count} ▼ ${behind_count}"
 
 [git_branch]
-format = "on [$symbol$branch](bold purple) "
+format = "on [$branch](bold purple) "
