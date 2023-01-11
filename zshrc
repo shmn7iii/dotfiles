@@ -18,25 +18,25 @@ source ~/.aliases
 # envs
 # ================================
 # rbenv
-eval "$(~/.rbenv/bin/rbenv init - zsh)"
 export RBENV_ROOT=~/.rbnev
 export PATH="${RBENV_ROOT}/bin:$PATH"
+eval "$(~/.rbenv/bin/rbenv init - zsh)"
 # goenv
-eval "$(~/.goenv/bin/goenv init -)"
 export GOENV_ROOT=~/.goenv
 export PATH="${GOENV_ROOT}/bin:$PATH"
+eval "$(~/.goenv/bin/goenv init -)"
 # nodenv
-eval "$(~/.nodenv/bin/nodenv init -)"
 export NODENV_ROOT=~/.nodenv
 export PATH="${NODENV_ROOT}/bin:$PATH"
+eval "$(~/.nodenv/bin/nodenv init -)"
 # jenv
-eval "$(~/.jenv/bin/jenv init -)"
 export JENV_ROOT=~/.jenv
 export PATH="${JENV_ROOT}/bin:$PATH"
+eval "$(~/.jenv/bin/jenv init -)"
 # pyenv
-eval "$(~/.pyenv/bin/pyenv init -)"
 export PYENV_ROOT=~/.pyenv
 export PATH="${PYENV_ROOT}/bin:$PATH"
+eval "$(~/.pyenv/bin/pyenv init -)"
 
 
 # ================================
