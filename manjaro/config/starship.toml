@@ -4,6 +4,10 @@ format = """
 
 scan_timeout = 10
 
+[character]
+success_symbol = "[▶](bold white) "
+error_symbol =   "[▶](bold white) "
+
 [shell]
 disabled = false
 
