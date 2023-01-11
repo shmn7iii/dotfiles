@@ -2,8 +2,8 @@
 
 /bin/bash setup.common.sh
 
-echo " 🏝 cp -f ./manjaro/config/ ~/.config/"
-cp -f ./manjaro/config/ ~/.config/
+echo " 🏝 cp -r ./manjaro/config/ ~/.config/"
+cp -r ./manjaro/config/ ~/.config/
 
 echo " 🏝 pacman -S ..."
 sudo pacman -S vim jq tree curl wget starship gnome-tweaks

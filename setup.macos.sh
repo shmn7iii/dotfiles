@@ -2,8 +2,8 @@
 
 /bin/bash setup.common.sh
 
-echo " 🏝 cp -f ./macos/config/ ~/.config/"
-cp -f ./macos/config/ ~/.config/
+echo " 🏝 cp -r ./macos/config/ ~/.config/"
+cp -r ./macos/config/ ~/.config/
 
 echo "🏝 Installing Brewfile..."
 if [ ! -f /usr/local/bin/brew ] ||  [ ! -f /opt/homebrew/bin/brew ] ; then
