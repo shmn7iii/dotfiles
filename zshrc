@@ -49,3 +49,8 @@ fi
 
 # starship
 eval "$(starship init zsh)"
+
+# jetbrains toolbox
+if [ $(uname) = "Darwin" ] ; then
+  export PATH="/Users/shmn7iii/Library/Application Support/JetBrains/Toolbox/scripts:$PATH"
+fi
