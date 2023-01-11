@@ -18,6 +18,7 @@ git clone https://github.com/syndbg/goenv.git ~/.goenv
 
 echo " 🏝 Installing nodenv..."
 git clone https://github.com/nodenv/nodenv.git ~/.nodenv
+git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
 
 echo " 🏝 Installing jenv..."
 git clone https://github.com/jenv/jenv.git ~/.jenv
