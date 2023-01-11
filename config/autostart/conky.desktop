@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Conky
+Comment=Conky Startup
+Exec=conky -p 5 -d -c /home/shmn7iii/.config/.conkyrc
+StartupNotify=false
+Terminal=false
+
