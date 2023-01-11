@@ -2,13 +2,22 @@
 
 /bin/bash setup.common.sh
 
-echo " 🏝 cp ./macos/zshrc ~/.zshrc"
-cp ./macos/zshrc ~/.zshrc
+echo " 🏝 cp -f ./config/ ~/.config/"
+cp -f ./config/ ~/.config/
+
+echo " 🏝 cp ./zshrc ~/.zshrc"
+cp ./zshrc ~/.zshrc
+
+echo " 🏝 ln -fs ../aliases ~/.aliases"
+ln -fs ../aliases ~/.aliases
+
+echo " 🏝 ln -fs ../vimrc ~/.vimrc"
+ln -fs ../vimrc ~/.vimrc
 
 echo "🏝 Installing Brewfile..."
 brew update
 brew upgrade
-brew bundle -v --file=./macos/Brewfile
+brew bundle -v --file=./Brewfile
 
 echo " 🏝 Installing anyenv..."
 anyenv init

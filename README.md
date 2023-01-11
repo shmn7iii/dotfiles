@@ -6,7 +6,8 @@
 $ xcode-select --install
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 $ git clone https://github.com/shmn7iii/dotfiles.git ~/.dotfiles && cd .dotfiles
-$ /bin/bash setup.macos.sh
+$ cd macos
+$ /bin/bash setup.sh
 ```
 
 ```bash
@@ -18,7 +19,8 @@ $ defaults write "Apple Global Domain" com.apple.mouse.scaling 10
 
 ```bash
 $ git clone https://github.com/shmn7iii/dotfiles.git ~/.dotfiles && cd .dotfiles
-$ /bin/bash setup.manjaro.sh
+$ cd manjaro
+$ /bin/bash setup.sh
 ```
 
 ### common: fonts
