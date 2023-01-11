@@ -1,0 +1,16 @@
+# reload shell
+alias reload='exec $SHELL -l'
+
+# list all file/directory
+alias la='ls -a'
+
+# change directory to "GitHub"
+mkdir -p ~/Documents/GitHub
+alias cg='cd ~/Documents/GitHub/'
+
+# ls after cd
+cdls ()
+{
+    \cd "$@" && ls -a
+}
+alias cd="cdls"
