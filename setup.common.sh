@@ -3,11 +3,11 @@
 echo " 🏝 cp ./zshrc ~/.zshrc"
 cp ./zshrc ~/.zshrc
 
-echo " 🏝 ln -fs ./aliases ~/.aliases"
-ln -fs ./aliases ~/.aliases
+echo " 🏝 cp ./aliases ~/.aliases"
+cp ./aliases ~/.aliases
 
-echo " 🏝 ln -fs ./vimrc ~/.vimrc"
-ln -fs ./vimrc ~/.vimrc
+echo " 🏝 cp ./vimrc ~/.vimrc"
+cp ./vimrc ~/.vimrc
 
 echo " 🏝 Installing rbenv..."
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
