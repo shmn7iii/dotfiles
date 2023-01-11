@@ -2,17 +2,8 @@
 
 /bin/bash setup.common.sh
 
-echo " 🏝 cp -f ./config/ ~/.config/"
-cp -f ./config/ ~/.config/
-
-echo " 🏝 cp ./zshrc ~/.zshrc"
-cp ./zshrc ~/.zshrc
-
-echo " 🏝 ln -fs ../aliases ~/.aliases"
-ln -fs ../aliases ~/.aliases
-
-echo " 🏝 ln -fs ../vimrc ~/.vimrc"
-ln -fs ../vimrc ~/.vimrc
+echo " 🏝 cp -f ./macos/config/ ~/.config/"
+cp -f ./macos/config/ ~/.config/
 
 echo "🏝 Installing Brewfile..."
 if [ ! -f /usr/local/bin/brew ] ||  [ ! -f /opt/homebrew/bin/brew ] ; then
@@ -21,11 +12,7 @@ if [ ! -f /usr/local/bin/brew ] ||  [ ! -f /opt/homebrew/bin/brew ] ; then
 fi
 brew update
 brew upgrade
-brew bundle -v --file=./Brewfile
-
-echo " 🏝 Installing anyenv..."
-anyenv init
-anyenv install --init
+brew bundle -v --file=./macos/Brewfile
 
 echo " 🏝 Writeing defaults for macOS..."
 defaults write com.apple.dock springboard-columns -int 8
@@ -45,3 +32,4 @@ killall Dock
 
 echo " 🏝 source ~/.zshrc"
 source ~/.zshrc
+
