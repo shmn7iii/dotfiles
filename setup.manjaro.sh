@@ -6,7 +6,7 @@ echo " 🏝 cp -r ./manjaro/config/ ~/.config/"
 cp -r ./manjaro/config/ ~/.config/
 
 echo " 🏝 pacman -S ..."
-sudo pacman -S vim jq tree curl wget starship gnome-tweaks
+sudo pacman -S neovim jq tree curl wget starship gnome-tweaks
 
 echo " 🏝 pamac install ..."
 sudo pamac install conky

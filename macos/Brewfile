@@ -1,5 +1,5 @@
 brew 'git'
-brew 'vim'
+brew 'neovim'
 brew 'jq'
 brew 'tree'
 brew 'yarn'
