@@ -9,6 +9,9 @@ cp ./aliases ~/.aliases
 echo " 🏝 cp ./vimrc ~/.vimrc"
 cp ./vimrc ~/.vimrc
 
+echo " 🏝 Installing vim-plug..."
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 echo " 🏝 Installing rbenv..."
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
