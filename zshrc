@@ -7,6 +7,10 @@ export PATH="/usr/local/sbin:$PATH"
 autoload -Uz colors && colors
 autoload -Uz compinit && compinit
 
+# homebrew
+if [ $(uname) = "Darwin" ] && [ $(uname -m) = "arm64" ] ; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # ================================
 # aliases
@@ -42,11 +46,6 @@ eval "$(~/.pyenv/bin/pyenv init -)"
 # ================================
 # init
 # ================================
-# homebrew
-if [ $(uname) = "Darwin" ] && [ $(uname -m) = "arm64" ] ; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
 # starship
 eval "$(starship init zsh)"
 
