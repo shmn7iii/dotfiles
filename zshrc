@@ -2,6 +2,7 @@
 # common
 # ================================
 export LANG=ja_JP.UTF-8
+export PATH="/usr/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 autoload -Uz colors && colors
