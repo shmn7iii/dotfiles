@@ -13,6 +13,7 @@ if [ $(uname) = "Darwin" ] && [ $(uname -m) = "arm64" ] ; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+
 # ================================
 # aliases
 # ================================
@@ -50,7 +51,9 @@ eval "$(~/.pyenv/bin/pyenv init -)"
 # starship
 eval "$(starship init zsh)"
 
+# TODO: デフォルトの場所が /usr/local/bin に変わったぽいので削除予定
 # jetbrains toolbox
 if [ $(uname) = "Darwin" ] ; then
   export PATH="/Users/shmn7iii/Library/Application Support/JetBrains/Toolbox/scripts:$PATH"
 fi
+
