@@ -9,8 +9,9 @@ mkdir -p ~/Documents/GitHub
 alias cg='cd ~/Documents/GitHub/'
 
 # ls after cd
-cdls ()
-{
-    \cd "$@" && ls -a
-}
+cdls() { \cd "$@" && ls -a; }
 alias cd="cdls"
+
+# mkdir and cd
+mkcd() { mkdir -p "$1" && cd "$1"; }
+
