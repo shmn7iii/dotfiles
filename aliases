@@ -1,17 +1,5 @@
-# reload shell
-alias reload='exec $SHELL -l'
-
-# list all file/directory
 alias la='ls -a'
-
-# change directory to "GitHub"
-mkdir -p ~/Documents/GitHub
-alias cg='cd ~/Documents/GitHub/'
-
-# ls after cd
-cdls() { \cd "$@" && ls -a; }
-alias cd="cdls"
-
-# mkdir and cd
-mkcd() { mkdir -p "$1" && cd "$1"; }
+alias cd='() { cd $1 && ls -a }'
+alias cg='() { cd ~/Documents/GitHub/$1 }'
+alias mkdir='() { mkdir -p $1 && cd $1 }'
 
