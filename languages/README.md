@@ -40,7 +40,9 @@ $ anyenv install jenv
 
 jenvでは別途言語環境を用意しなきゃいけない
 
-参考：[「jenvによる複数バージョン共存、切り替え可能なJava開発環境の構築」](https://startappdevfrom35.com/multiversionjavadevenv/)
+参考：  
+[「jenvによる複数バージョン共存、切り替え可能なJava開発環境の構築」](https://startappdevfrom35.com/multiversionjavadevenv/)  
+[「HomebrewでインストールできるJDKまとめ」](https://qiita.com/gishi_yama/items/ee3526e7e7a922148333#openjdk)
 
 ## Node.js
 
