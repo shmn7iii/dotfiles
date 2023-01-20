@@ -10,6 +10,9 @@ if [ ! -f /usr/local/bin/brew ] ||  [ ! -f /opt/homebrew/bin/brew ] ; then
  echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
+if [ $(uname) = "Darwin" ] && [ $(uname -m) = "arm64" ] ; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 brew update
 brew upgrade
 brew bundle -v --file=./macos/Brewfile
