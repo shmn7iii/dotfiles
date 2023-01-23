@@ -1,4 +1,6 @@
 alias la='ls -a'
+alias cp='cp -i'
+alias df='df -h'
 alias cd='() { cd $1 && ls -a }'
 alias cg='() { cd ~/Documents/GitHub/$1 }'
 alias mkdir='() { mkdir -p $1 && cd $1 }'
