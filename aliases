@@ -1,7 +1,15 @@
 alias la='ls -a'
 alias cp='cp -i'
 alias df='df -h'
+
+# change directory and list files
 cdls () { \cd "$@" && ls -a }
 alias cd="cdls"
+
+# change directory to github's
 alias cg='() { cd ~/Documents/GitHub/$1 }'
+
+# make directory and cd
 alias mkdir='() { mkdir -p $1 && cd $1 }'
+
+alias ldc='lazydocker'

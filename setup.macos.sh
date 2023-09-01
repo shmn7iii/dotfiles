@@ -1,9 +1,14 @@
 #!/bin/bash -eu
 
+if [ "$(uname)" != "Darwin" ] ; then
+	echo "Invalid OS!"
+	exit 1
+fi
+
 /bin/bash setup.common.sh
 
-echo " 🏝 cp -r ./macos/config/ ~/.config/"
-cp -r ./macos/config/ ~/.config/
+echo " 🏝 ln -sf ./macos/config/ ~/.config/"
+ln -sf `pwd`/macos/config/ ~/.config/
 
 echo "🏝 Installing Brewfile..."
 if [ ! -f /usr/local/bin/brew ] ||  [ ! -f /opt/homebrew/bin/brew ] ; then
@@ -35,4 +40,3 @@ killall Dock
 
 echo " 🏝 source ~/.zshrc"
 source ~/.zshrc
-

@@ -1,15 +1,19 @@
+# system
 brew 'git'
-brew 'neovim'
 brew 'jq'
 brew 'tree'
 brew 'yarn'
 brew 'curl'
 brew 'wget'
+brew 'libyaml'
+
+brew 'mas'
 brew 'starship'
+brew 'neovim'
+brew 'lazydocker'
 
-cask 'google-chrome'
-cask 'firefox'
 
+# develop
 cask 'warp'
 cask 'visual-studio-code'
 cask 'coteditor'
@@ -19,17 +23,32 @@ cask 'postman'
 cask 'tableplus'
 cask 'altair-graphql-client'
 
+# social
+cask 'google-chrome'
+cask 'google-drive'
 cask 'slack'
 cask 'discord'
 cask 'zoom'
 cask 'notion'
+cask 'cron'
 
+# util
+cask '1password'
+cask 'alt-tab'
+cask 'skitch'
+cask 'rectangle'
+cask 'karabiner-elements'
+cask 'hiddenbar'
 cask 'appcleaner'
 cask 'the-unarchiver'
+cask 'balenaetcher'
 
-cask 'rectangle'
-cask 'skitch'
-cask 'karabiner-elements'
-cask 'alt-tab'
-
+# screensaver
 cask 'fliqlo'
+
+# mac app store
+mas "LanScan", id: 472226235
+mas "RunCat", id: 1429033973
+mas "Unsplash Wallpapers", id: 1284863847
+mas "Spaced", id: 1666327168
+mas "MagicNotch", id: 6447055708

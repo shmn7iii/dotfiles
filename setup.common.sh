@@ -1,13 +1,13 @@
 #!/bin/bash -eu
 
-echo " 🏝 cp ./zshrc ~/.zshrc"
-cp ./zshrc ~/.zshrc
+echo " 🏝 ln -sf ./zshrc ~/.zshrc"
+ln -sf `pwd`/zshrc ~/.zshrc
 
-echo " 🏝 cp ./aliases ~/.aliases"
-cp ./aliases ~/.aliases
+echo " 🏝 ln -sf ./aliases ~/.aliases"
+ln -sf `pwd`/aliases ~/.aliases
 
-echo " 🏝 cp ./vimrc ~/.vimrc"
-cp ./vimrc ~/.vimrc
+echo " 🏝 ln -sf ./vimrc ~/.vimrc"
+ln -sf `pwd`/vimrc ~/.vimrc
 
 echo " 🏝 Installing vim-plug..."
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
