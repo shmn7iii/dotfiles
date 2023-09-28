@@ -1,3 +1,4 @@
+# ===========================================
 # system
 brew 'git'
 brew 'jq'
@@ -13,6 +14,7 @@ brew 'neovim'
 brew 'lazydocker'
 
 
+# ===========================================
 # develop
 cask 'warp'
 cask 'visual-studio-code'
@@ -34,21 +36,22 @@ cask 'cron'
 
 # util
 cask '1password'
-cask 'alt-tab'
-cask 'skitch'
-cask 'rectangle'
-cask 'karabiner-elements'
-cask 'hiddenbar'
 cask 'appcleaner'
 cask 'the-unarchiver'
 cask 'balenaetcher'
 
-# screensaver
-cask 'fliqlo'
+# system
+cask 'alt-tab'
+cask 'skitch'
+cask 'rectangle'
+cask 'karabiner-elements'
+cask 'scroll-reverser'
+cask 'hiddenbar'
 
+
+# ===========================================
 # mac app store
 mas "LanScan", id: 472226235
 mas "RunCat", id: 1429033973
-mas "Unsplash Wallpapers", id: 1284863847
 mas "Spaced", id: 1666327168
 mas "MagicNotch", id: 6447055708
