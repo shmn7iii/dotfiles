@@ -44,9 +44,9 @@ cask 'balenaetcher'
 cask 'alt-tab'
 cask 'skitch'
 cask 'rectangle'
-cask 'karabiner-elements'
-cask 'scroll-reverser'
 cask 'hiddenbar'
+cask 'karabiner-elements'
+cask 'mos'
 
 
 # ===========================================
