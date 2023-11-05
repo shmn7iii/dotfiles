@@ -12,6 +12,8 @@ brew 'readline'
 brew 'mas'
 brew 'starship'
 brew 'neovim'
+brew 'zoxide'
+brew 'fzf'
 brew 'lazydocker'
 
 

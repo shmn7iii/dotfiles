@@ -51,6 +51,9 @@ eval "$(~/.pyenv/bin/pyenv init -)"
 # starship
 eval "$(starship init zsh)"
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 # jetbrains toolbox
 if [ $(uname) = "Darwin" ] ; then
   export PATH="/Users/$USER/Library/Application Support/JetBrains/Toolbox/scripts:$PATH"
