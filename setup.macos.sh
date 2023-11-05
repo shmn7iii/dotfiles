@@ -10,6 +10,9 @@ fi
 echo " 🏝 ln -sf ./macos/config/ ~/.config/"
 ln -sf `pwd`/macos/config/ ~/.config/
 
+echo " 🏝 ln -sf ./macos/ssh/ ~/.ssh/"
+ln -sf `pwd`/macos/ssh/ ~/.ssh/
+
 echo "🏝 Installing Brewfile..."
 if [ ! -f /usr/local/bin/brew ] ||  [ ! -f /opt/homebrew/bin/brew ] ; then
  echo "Installing Homebrew..."
