@@ -12,6 +12,8 @@ autoload -Uz compinit && compinit
 if [ $(uname -m) = "arm64" ] ; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+# disable auto update
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 
 # ================================
