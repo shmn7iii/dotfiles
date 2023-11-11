@@ -15,11 +15,11 @@ ln -sf `pwd`/aliases ~/.aliases
 echo " 🏝 ln -sf ./vimrc ~/.vimrc"
 ln -sf `pwd`/vimrc ~/.vimrc
 
-echo " 🏝 ln -sf ./macos/config/ ~/.config/"
-ln -sf `pwd`/macos/config/ ~/.config/
+echo " 🏝 ln -sf ./config/ ~/.config/"
+ln -sf `pwd`/config/ ~/.config/
 
-echo " 🏝 ln -sf ./macos/ssh/ ~/.ssh/"
-ln -sf `pwd`/macos/ssh/ ~/.ssh/
+echo " 🏝 ln -sf ./ssh/ ~/.ssh/"
+ln -sf `pwd`/ssh/ ~/.ssh/
 
 
 echo "🏝 Installing Brewfile..."
@@ -27,13 +27,13 @@ if [ ! -f /usr/local/bin/brew ] ||  [ ! -f /opt/homebrew/bin/brew ] ; then
  echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
-if [ $(uname) = "Darwin" ] && [ $(uname -m) = "arm64" ] ; then
+if [ $(uname -m) = "arm64" ] ; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 brew update
 brew upgrade
 brew tap homebrew/cask-fonts
-brew bundle -v --file=./macos/Brewfile
+brew bundle -v --file=./Brewfile
 
 
 echo " 🏝 Installing rbenv..."

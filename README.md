@@ -5,7 +5,7 @@
 ```bash
 $ xcode-select --install
 $ git clone https://github.com/shmn7iii/dotfiles.git ~/.dotfiles && cd ~/.dotfiles
-$ /bin/bash setup.macos.sh
+$ bash setup.sh
 ```
 
 ```bash
