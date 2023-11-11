@@ -39,6 +39,7 @@ cask 'cron'
 
 # util
 cask '1password'
+cask '1password-cli'
 cask 'appcleaner'
 cask 'the-unarchiver'
 cask 'balenaetcher'

@@ -9,7 +9,7 @@ autoload -Uz colors && colors
 autoload -Uz compinit && compinit
 
 # homebrew
-if [ $(uname) = "Darwin" ] && [ $(uname -m) = "arm64" ] ; then
+if [ $(uname -m) = "arm64" ] ; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
@@ -55,6 +55,4 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 # jetbrains toolbox
-if [ $(uname) = "Darwin" ] ; then
-  export PATH="/Users/$USER/Library/Application Support/JetBrains/Toolbox/scripts:$PATH"
-fi
+export PATH="/Users/$USER/Library/Application Support/JetBrains/Toolbox/scripts:$PATH"
