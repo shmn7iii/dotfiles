@@ -61,20 +61,106 @@ git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 
 echo " 🏝 Writeing defaults for macOS..."
-defaults write com.apple.dock springboard-columns -int 8
-defaults write com.apple.dock springboard-rows -int 6
-defaults write com.apple.dock autohide-delay -float 0
-defaults write com.apple.dock mru-spaces -bool false
-defaults write com.apple.dock persistent-apps -array
-defaults write com.apple.dock ResetLaunchPad -bool true
-defaults write com.apple.finder QuitMenuItem -bool true
-defaults write com.apple.finder AppleShowAllFiles -bool true
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-defaults write -g AppleScrollerPagingBehavior -bool true
-defaults write -g NSCloseAlwaysConfirmsChanges -bool false
+# Ref. https://macos-defaults.com/
+defaults write com.apple.dock "autohide" -bool "true"
+defaults write com.apple.dock "autohide-delay" -float "0"
+defaults write com.apple.dock "autohide-time-modifier" -float "0.5"
+defaults write com.apple.dock "mineffect" -string "genie"
+defaults write com.apple.dock "mru-spaces" -bool "false"
+defaults write com.apple.dock "orientation" -string "bottom"
+defaults write com.apple.dock "scroll-to-open" -bool "true"
+defaults write com.apple.dock "show-recents" -bool "true"
+defaults write com.apple.dock "springboard-columns" -int 8
+defaults write com.apple.dock "springboard-rows" -int 6
+defaults write com.apple.dock "tilesize" -int "36"
+defaults write com.apple.dock "static-only" -bool "false"
+defaults write com.apple.dock "expose-group-apps" -bool "false"
+
+defaults write com.apple.controlcenter "NSStatusItem Preferred Position BentoBox" -int "157"
+defaults write com.apple.controlcenter "NSStatusItem Preferred Position Sound" -int "191"
+defaults write com.apple.controlcenter "NSStatusItem Preferred Position WiFi" -int "229"
+defaults write com.apple.controlcenter "NSStatusItem Preferred Position Display" -int "307"
+defaults write com.apple.controlcenter "NSStatusItem Preferred Position Battery" -int "335"
+defaults write com.apple.controlcenter "NSStatusItem Visible WiFi" -int "1"
+defaults write com.apple.controlcenter "NSStatusItem Visible Bluetooth" -int "0"
+defaults write com.apple.controlcenter "NSStatusItem Visible AirDrop" -int "0"
+defaults write com.apple.controlcenter "NSStatusItem Visible FocusModes" -int "0"
+defaults write com.apple.controlcenter "NSStatusItem Visible StageManager" -int "0"
+defaults write com.apple.controlcenter "NSStatusItem Visible ScreenMirroring" -int "0"
+defaults write com.apple.controlcenter "NSStatusItem Visible Display" -int "0"
+defaults write com.apple.controlcenter "NSStatusItem Visible Sound" -int "1"
+defaults write com.apple.controlcenter "NSStatusItem Visible NowPlaying" -int "0"
+defaults write com.apple.controlcenter "NSStatusItem Visible Battery" -int "1"
+defaults write com.apple.controlcenter "NSStatusItem Visible BentoBox" -int "1"
+defaults write com.apple.controlcenter "NSStatusItem Visible AudioVideoModule" -int "0"
+defaults write com.apple.controlcenter "NSStatusItem Visible Clock" -int "1"
+
+defaults write com.apple.finder "AppleShowAllFiles" -bool "true"
+defaults write com.apple.finder "CreateDesktop" -bool "true"
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+defaults write com.apple.finder "ShowHardDrivesOnDesktop" -bool "false"
+defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool "true"
+defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "true"
+defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "false"
+defaults write com.apple.finder "QuitMenuItem" -bool "true"
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
+defaults write com.apple.finder "_FXSortFoldersFirstOnDesktop" -bool "false"
+defaults write com.apple.finder "FXPreferredViewStyle" -string "icnv"
+defaults write com.apple.finder "FXDefaultSearchScope" -string "SCev"
+defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
+defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
+
+defaults write com.apple.screencapture "disable-shadow" -bool "false"
+defaults write com.apple.screencapture "include-date" -bool "true"
+defaults write com.apple.screencapture "location" -string "~/Desktop"
+defaults write com.apple.screencapture "show-thumbnail" -bool "false"
+defaults write com.apple.screencapture "type" -string "png"
+
+defaults write com.apple.universalaccess "showWindowTitlebarIcons" -bool "false"
+
+defaults write com.apple.menuextra.clock "FlashDateSeparators" -bool "false"
+defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
+
+defaults write com.apple.AppleMultitouchTrackpad "FirstClickThreshold" -int "1"
+defaults write com.apple.AppleMultitouchTrackpad "DragLock" -bool "false"
+defaults write com.apple.AppleMultitouchTrackpad "Dragging" -bool "false"
+defaults write com.apple.AppleMultitouchTrackpad "TrackpadThreeFingerDrag" -bool "false"
+
+defaults write com.apple.spaces "spans-displays" -bool "false"
+
+defaults write com.apple.appleseed.FeedbackAssistant "Autogather" -bool "true"
+
+defaults write com.apple.TextEdit "RichText" -bool "false"
+
+defaults write com.apple.Music "userWantsPlaybackNotifications" -bool "false"
+
+defaults write com.apple.mouse.tapBehavior -int "1"
+
+defaults write com.apple.CrashReporter "DialogType" -string "none"
+
+defaults write com.apple.LaunchServices "LSQuarantine" -bool "false"
+
+defaults write com.apple.desktopservices "DSDontWriteNetworkStores" -bool "true"
+
+defaults write NSGlobalDomain "AppleActionOnDoubleClick" -string "Minimize"
+defaults write NSGlobalDomain "AppleMiniaturizeOnDoubleClick" -bool "false"
+defaults write NSGlobalDomain "AppleShowScrollBars" -string "WhenScrolling"
+defaults write NSGlobalDomain "AppleScrollerPagingBehavior" -bool "true"
+defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true"
+defaults write NSGlobalDomain "AppleSpacesSwitchOnActivate" -bool "false"
+defaults write NSGlobalDomain "AppleMenuBarVisibleInFullscreen" -bool "true"
+defaults write NSGlobalDomain "NSDocumentSaveNewDocumentsToCloud" -bool "false"
+defaults write NSGlobalDomain "NSToolbarTitleViewRolloverDelay" -float "0"
+defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "2"
+defaults write NSGlobalDomain "NSCloseAlwaysConfirmsChanges" -bool "true"
+defaults write NSGlobalDomain "InitialKeyRepeat" -int "15"
+defaults write NSGlobalDomain "KeyRepeat" -int "2"
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool "true"
+defaults write NSGlobalDomain com.apple.sound.beep.feedback -bool "true"
 
 killall Dock
+killall Finder
+killall SystemUIServer
 
 echo " 🏝 source ~/.zshrc"
 source ~/.zshrc
