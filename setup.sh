@@ -32,6 +32,7 @@ if [ $(uname) = "Darwin" ] && [ $(uname -m) = "arm64" ] ; then
 fi
 brew update
 brew upgrade
+brew tap homebrew/cask-fonts
 brew bundle -v --file=./macos/Brewfile
 
 

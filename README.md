@@ -12,7 +12,3 @@ $ /bin/bash setup.macos.sh
 # option: mouse speed
 $ defaults write "Apple Global Domain" com.apple.mouse.scaling 10
 ```
-
-### common: fonts
-
-[Cica](https://github.com/miiton/Cica)

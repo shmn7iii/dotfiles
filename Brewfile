@@ -52,6 +52,8 @@ cask 'hiddenbar'
 cask 'karabiner-elements'
 cask 'mos'
 
+# font
+cask 'font-cica'
 
 # ===========================================
 # mac app store
