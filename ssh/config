@@ -1,3 +1,5 @@
 Host *
+  ServerAliveInterval 60
+  LogLevel error
   StrictHostKeyChecking no
-  UserKnownHostsFile=/dev/null
+  UserKnownHostsFile /dev/null
