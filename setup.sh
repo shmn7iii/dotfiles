@@ -15,20 +15,20 @@ ln -sf `pwd`/aliases ~/.aliases
 echo " 🏝 ln -sf ./vimrc ~/.vimrc"
 ln -sf `pwd`/vimrc ~/.vimrc
 
-echo " 🏝 ln -sf ./config/ ~/.config/"
-ln -sf `pwd`/config/ ~/.config/
+echo " 🏝 ln -sf ./config/ ~/.config"
+cp -r `pwd`/config/ ~/.config
 
-echo " 🏝 ln -sf ./ssh/ ~/.ssh/"
-ln -sf `pwd`/ssh/ ~/.ssh/
+echo " 🏝 ln -sf ./ssh/ ~/.ssh"
+cp -r `pwd`/ssh/ ~/.ssh
 
 
 echo "🏝 Installing Brewfile..."
 if [ ! -f /usr/local/bin/brew ] ||  [ ! -f /opt/homebrew/bin/brew ] ; then
- echo "Installing Homebrew..."
+  echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-fi
-if [ $(uname -m) = "arm64" ] ; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+  if [ $(uname -m) = "arm64" ] ; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
 fi
 brew update
 brew upgrade
