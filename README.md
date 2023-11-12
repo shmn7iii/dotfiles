@@ -9,6 +9,6 @@ $ bash setup.sh
 ```
 
 ```bash
-# option: mouse speed
+# option: mouse speed for MagicMouse
 $ defaults write "Apple Global Domain" com.apple.mouse.scaling 10
 ```
