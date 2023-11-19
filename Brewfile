@@ -45,11 +45,12 @@ cask 'the-unarchiver'
 cask 'balenaetcher'
 
 # system
+cask 'raycast'
 cask 'alt-tab'
-cask 'skitch'
-cask 'hiddenbar'
 cask 'karabiner-elements'
 cask 'mos'
+cask 'skitch'
+cask 'hiddenbar'
 
 # font
 cask 'font-cica'
