@@ -47,7 +47,6 @@ cask 'balenaetcher'
 # system
 cask 'alt-tab'
 cask 'skitch'
-cask 'rectangle'
 cask 'hiddenbar'
 cask 'karabiner-elements'
 cask 'mos'
