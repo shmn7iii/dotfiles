@@ -1,5 +1,7 @@
 format = """
-$directory$git_branch$git_status$git_commit$ruby$golang$nodejs$java$python"""
+$directory$git_branch$git_status$git_commit$ruby$golang$nodejs$java$python$deno
+[❯](bold green)
+"""
 
 scan_timeout = 10
 
