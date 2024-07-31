@@ -27,9 +27,6 @@ eval "$(starship init zsh)"
 # zoxide
 eval "$(zoxide init zsh)"
 
-# jetbrains toolbox
-export PATH="/Users/$USER/Library/Application Support/JetBrains/Toolbox/scripts:$PATH"
-
 
 # ================================
 # source
