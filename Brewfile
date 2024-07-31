@@ -43,6 +43,7 @@ cask '1password-cli'
 cask 'appcleaner'
 cask 'the-unarchiver'
 cask 'balenaetcher'
+cask 'clipy'
 
 # system
 cask 'raycast'
