@@ -6,8 +6,7 @@ export PATH="/usr/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 autoload -Uz colors && colors
-autoload -Uz compinit && compinit
-
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # ================================
 # init

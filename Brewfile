@@ -15,7 +15,7 @@ brew 'neovim'
 brew 'zoxide'
 brew 'fzf'
 brew 'lazydocker'
-
+brew 'zsh-autosuggestions'
 
 # ===========================================
 # develop
