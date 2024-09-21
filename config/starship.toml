@@ -1,16 +1,27 @@
+# https://starship.rs/ja-JP/config/
+
 format = """
 $directory$git_branch$git_status$git_commit$ruby$golang$nodejs$java$python$deno
-[❯](bold green) 
+[❯](bold green) \
+"""
+
+right_format = """
+$character$time
 """
 
 scan_timeout = 10
+
+[character]
+success_symbol = ""
+error_symbol = "[](bold red) "
 
 [shell]
 disabled = false
 
 [directory]
 style = "bold blue"
-read_only_style = "white"
+read_only = "🔒 "
+read_only_style = "red"
 fish_style_pwd_dir_length = 3
 format = "[$read_only]($read_only_style)[  ]($style)[$path]($style) "
 truncation_length = 4
@@ -31,3 +42,7 @@ diverged = "▲ ${ahead_count} ▼ ${behind_count}"
 
 [git_branch]
 format = "on [$branch](bold purple) "
+
+[time]
+disabled = false
+format = "[$time]($style)"
