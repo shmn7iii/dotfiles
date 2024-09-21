@@ -26,6 +26,7 @@ cask 'github'
 cask 'docker'
 cask 'postman'
 cask 'tableplus'
+casl 'sequel-ace'
 cask 'altair-graphql-client'
 
 # social
@@ -43,7 +44,6 @@ cask '1password-cli'
 cask 'appcleaner'
 cask 'the-unarchiver'
 cask 'balenaetcher'
-cask 'clipy'
 
 # system
 cask 'raycast'
