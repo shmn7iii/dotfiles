@@ -9,3 +9,12 @@
 
 [commit]
   gpgsign = true
+
+[alias]
+	s = status
+	b = branch
+	co = checkout
+	a = add
+	c = commit
+	p = push
+	pl = pull
