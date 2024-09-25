@@ -53,4 +53,5 @@ color-automation = []
 # More information in: https://raphamorim.io/rio/docs/config/bindings
 keys = [
   { key = "d", with = "super", action = "SplitHorizontally" },
+  { key = "w", with = "super | control", action = "CloseUnfocusedTabs" },
 ]

@@ -8,6 +8,9 @@ export PATH="/usr/local/sbin:$PATH"
 autoload -Uz colors && colors
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# rio term
+export TERM=xterm-256color
+
 # ================================
 # init
 # ================================

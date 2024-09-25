@@ -1,0 +1,30 @@
+# Based on Warp default theme
+# https://github.com/warpdotdev/themes/blob/main/warp_bundled/warp_dark.yaml
+
+[colors]
+background       = '#000000'
+foreground       = '#ffffff'
+light-foreground = '#d8dee9'
+
+cursor           = '#d8dee9'
+
+tabs             = '#494c62'
+tabs-active      = '#6a6e8e'
+
+black            = '#616161'
+blue             = '#a5d5fe'
+cyan             = '#d0d1fe'
+green            = '#b4fa72'
+magenta          = '#ff8ffd'
+red              = '#ff8272'
+white            = '#f1f1f1'
+yellow           = '#fefdc2'
+
+light-black      = '#8e8e8e'
+light-blue       = '#c1e3fe'
+light-cyan       = '#e5e6fe'
+light-green      = '#d6fcb9'
+light-magenta    = '#ffb1fe'
+light-red        = '#ffc4bd'
+light-white      = '#feffff'
+light-yellow     = '#fefdd5'
